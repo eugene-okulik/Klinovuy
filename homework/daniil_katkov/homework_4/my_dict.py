@@ -1,8 +1,8 @@
 my_dict = {
-    'tuple':(1, 3, 1, 'name', True),
-    'list':[False, 'Daniil', 8, 'Python'],
-    'dict':{'my_name': 'Daniil', 'username': 'Klinovuy', 'age': 32, 'city': 'Kharkiv', 'male': True},
-    'set':{8, 12, True, 'life', 3.26}
+    'tuple': (1, 3, 1, 'name', True),
+    'list': [False, 'Daniil', 8, 'Python'],
+    'dict': {'my_name': 'Daniil', 'username': 'Klinovuy', 'age': 32, 'city': 'Kharkiv', 'male': True},
+    'set': {8, 12, True, 'life', 3.26}
 }
 
 print(my_dict['tuple'][-1])
@@ -14,4 +14,3 @@ my_dict['set'].add('Daniil')
 my_dict['set'].remove(True)
 
 print(my_dict)
-
