@@ -1,9 +1,9 @@
 for element in range(1, 101):
-    if (element/5).is_integer() and (element/3).is_integer():
+    if (element / 5).is_integer() and (element / 3).is_integer():
         print('FuzzBuzz')
-    elif (element/3).is_integer():
+    elif (element / 3).is_integer():
         print('Fuzz')
-    elif (element/5).is_integer():
+    elif (element / 5).is_integer():
         print('Buzz')
     else:
         print(element)
