@@ -5,6 +5,7 @@ def gen():
         yield start
         start, start_1 = (start_1, start + start_1)
 
+
 fib_numbers = []
 
 
@@ -14,4 +15,4 @@ for element in gen():
         fib_numbers.append(element)
         print(fib_numbers)
         break
-    count +=1
+    count += 1
