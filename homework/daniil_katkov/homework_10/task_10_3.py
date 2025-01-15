@@ -2,8 +2,8 @@ number_one = int(input('Введите первое число: '))
 number_two = int(input('Введите второе число: '))
 
 
-def operations (func):
-    def wrapper (first, second):
+def operations(func):
+    def wrapper(first, second):
         if first == second:
             operation = '+'
         elif first > second:
@@ -14,7 +14,7 @@ def operations (func):
             operation = '*'
         else:
             return 'Error'
-        return func (first, second, operation)
+        return func(first, second, operation)
     return wrapper
 
 
@@ -23,13 +23,13 @@ def calc(first, second, operation):
     if operation == '+':
         return first + second
     elif operation == '-':
-       return first - second
+        return first - second
     elif operation == '*':
-       return first * second
+        return first * second
     elif operation == '/':
-       return first / second
+        return first / second
     else:
-       return 'Error'
+        return 'Error'
 
 
 result = calc(number_one, number_two)
