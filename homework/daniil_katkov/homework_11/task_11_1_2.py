@@ -2,18 +2,20 @@ class Book:
     material_stranic = 'бумага'
     nalichie_teksta = 'Да'
     rezerv = False
+
     def __init__(self, nazvanie_knigi, avtor, kolichestvo_stranic, isbn):
         self.nazvanie_knigi = nazvanie_knigi
         self.avtor = avtor
         self.kolichestvo_stranic = kolichestvo_stranic
         self.isbn = isbn
 
-book_1 = Book('Идиот', 'Достоевский',500, '978-5-17-118366-5')
+
+book_1 = Book('Идиот', 'Достоевский', 500, '978-5-17-118366-5')
 book_2 = Book('Преступление и наказание', 'Достоевский',364, '978-5-17-118274-3')
-book_3 = Book('Выбор', 'Эдит Ева Эгер',609, '978-5-17-118291-4')
+book_3 = Book('Выбор', 'Эдит Ева Эгер', 609, '978-5-17-118291-4')
 book_3.rezerv = True
-book_4 = Book('Мемуары', 'Карл Густав Маннергейм',1003, '978-5-17-118537-5')
-book_5 = Book('Дети кукурузы', 'Стивен Кинг',154, '978-5-17-118476-2')
+book_4 = Book('Мемуары', 'Карл Густав Маннергейм', 1003, '978-5-17-118537-5')
+book_5 = Book('Дети кукурузы', 'Стивен Кинг', 154, '978-5-17-118476-2')
 
 
 def print_book(number_book):
