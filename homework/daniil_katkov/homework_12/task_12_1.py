@@ -10,7 +10,6 @@ class Flowers:
         self.lifespan = lifespan
         self.cost = cost
 
-
     def wilt_time(self):
         return f'Время увядания для {self.name} - {self.lifespan}'
 
@@ -28,31 +27,28 @@ class Peonies(Flowers):
     def __init__(self, freshness, colour, stem_length, cost):
         super().__init__('Пиона', freshness, colour, stem_length, 8, cost)
 
+
 class Buttercups(Flowers):
     def __init__(self, freshness, colour, stem_length, cost):
         super().__init__('Лютик', freshness, colour, stem_length, 12, cost)
+
 
 class Bouquets:
     def __init__(self):
         self.flowers = []
 
-
     def add_flower(self, flower):
         self.flowers.append(flower)
-
 
     def flower_price(self):
         return sum(flower.cost for flower in self.flowers)
 
-
     def time_to_finish(self):
         return round((sum(flower.freshness for flower in self.flowers) / len(self.flowers)), 2)
 
-
     def sort_by_key(self, key):
-        self.flowers.sort(key = attrgetter(key))
+        self.flowers.sort(key=attrgetter(key))
         return self.flowers
-
 
     def search_by(self, attribute, average_value):
         return [flower for flower in self.flowers if getattr(flower, attribute) >= average_value]
@@ -81,4 +77,3 @@ print(bouquet.time_to_finish())
 
 for flower in bouquet.search_by('stem_length', 45):
     print(flower)
-
