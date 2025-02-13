@@ -31,10 +31,6 @@ format_date(third_line)
 #######################################################################################################
 
 
-import os
-import datetime
-
-
 my_path = os.path.dirname(__file__)
 file_data = os.path.dirname(os.path.dirname(my_path))
 file_path = os.path.join(file_data, 'eugene_okulik', 'hw_13', 'data.txt')
@@ -46,7 +42,6 @@ with open(file_path) as file:
 def process_line(line):
     parts = line.split(" - ")
     number, date_str = parts[0].split(". ")
-    action = parts[1].strip()
     date = datetime.datetime.strptime(date_str, "%Y-%m-%d %H:%M:%S.%f")
     if number == "1":
         print(date + datetime.timedelta(days=7))
