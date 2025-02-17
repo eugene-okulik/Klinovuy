@@ -30,7 +30,7 @@ cursor.execute(f"UPDATE students SET group_id = {group_id} WHERE id = {student_i
 
 new_subjects = "INSERT INTO subjets (title) VALUES (%s)"
 cursor.executemany(new_subjects, [('Selenium (basic)',), ('Selenium (advanced)',)])
-cursor.execute(f"SELECT * FROM subjets ORDER BY id DESC LIMIT 0, 2")
+cursor.execute("SELECT * FROM subjets ORDER BY id DESC LIMIT 0, 2")
 my_subjects = cursor.fetchall()
 subject1_id = my_subjects[0]['id']
 subject2_id = my_subjects[1]['id']
@@ -44,7 +44,7 @@ cursor.executemany(
         ('Locust (part 2)', subject2_id)
     ]
 )
-cursor.execute(f"SELECT * FROM lessons ORDER BY id DESC LIMIT 0, 4")
+cursor.execute("SELECT * FROM lessons ORDER BY id DESC LIMIT 0, 4")
 my_lessons = cursor.fetchall()
 lesson1_id_part_1 = my_lessons[0]['id']
 lesson1_id_part_2 = my_lessons[1]['id']
@@ -60,7 +60,7 @@ cursor.executemany(
         (4, lesson2_id_part_2, student_id)
     ]
 )
-cursor.execute(f"SELECT * FROM marks ORDER BY id DESC LIMIT 0, 4")
+cursor.execute("SELECT * FROM marks ORDER BY id DESC LIMIT 0, 4")
 my_marks = cursor.fetchall()
 my_marks_id_1 = my_marks[0]['id']
 my_marks_id_2 = my_marks[1]['id']
