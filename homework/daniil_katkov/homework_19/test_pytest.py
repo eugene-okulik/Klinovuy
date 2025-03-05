@@ -59,7 +59,7 @@ def create_object_fixture():
         }
     }
 ]
-                         )
+)
 @pytest.mark.parametrize('headers', [{'Content-Type': 'application/json'}])
 @pytest.mark.critical
 def test_create_object(body, headers, start_complete, before_after):
