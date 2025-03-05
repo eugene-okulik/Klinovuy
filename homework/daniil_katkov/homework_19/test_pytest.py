@@ -36,7 +36,8 @@ def create_object_fixture():
     requests.delete(f'http://167.172.172.115:52353/object/{post_id}')
 
 
-@pytest.mark.parametrize('body', [{
+@pytest.mark.parametrize('body', [
+    {
         "name": "Python",
         "data": {
             "book": "long",
@@ -56,8 +57,10 @@ def create_object_fixture():
             "book": "not long",
             "language": "not easy"
         }
-    }])
-@pytest.mark.parametrize('headers', [{ 'Content-Type': 'application/json'}])
+    }
+]
+                         )
+@pytest.mark.parametrize('headers', [{'Content-Type': 'application/json'}])
 @pytest.mark.critical
 def test_create_object(body, headers, start_complete, before_after):
     response = requests.post('http://167.172.172.115:52353/object', json=body, headers=headers)
