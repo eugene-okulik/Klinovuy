@@ -77,7 +77,7 @@ def test_patch_object(create_object_fixture, before_after):
         }
     with allure.step(f'Update post with id {create_object_fixture} via PATCH method'):
         response = requests.patch(f'http://167.172.172.115:52353/object/{create_object_fixture}',
-                                json=body, headers=headers)
+                                  json=body, headers=headers)
     with allure.step(f'Check that name is {body["name"]}'):
         assert response.json()['name'] == "Python (basic)", 'Not Python (basic)'
 
@@ -89,5 +89,5 @@ def test_patch_object(create_object_fixture, before_after):
 def test_delete_object(create_object_fixture, before_after):
     with allure.step('Send delete request for deleting a new post'):
         response = requests.delete(f'http://167.172.172.115:52353/object/{create_object_fixture}')
-    with allure.step(f'Check that status code is 200'):
+    with allure.step('Check that status code is 200'):
         assert response.status_code == 200, 'No 200'
