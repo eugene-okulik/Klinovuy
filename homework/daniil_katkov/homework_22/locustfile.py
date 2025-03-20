@@ -1,6 +1,7 @@
 from locust import task, HttpUser
 import random
 
+
 class MyObjects(HttpUser):
     object_id = None
     headers = {'Content-type': 'application/json'}
